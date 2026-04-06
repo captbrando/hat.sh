@@ -3,8 +3,8 @@
   "version": "2.3.6",
   "private": true,
   "scripts": {
-    "dev": "browserify service-worker/sw.js -o public/service-worker.js && next dev",
-    "build": "browserify service-worker/sw.js -o public/service-worker.js && next build",
+    "dev": "esbuild service-worker/sw.js --bundle --platform=browser --outfile=public/service-worker.js && next dev",
+    "build": "esbuild service-worker/sw.js --bundle --platform=browser --outfile=public/service-worker.js && next build",
     "postbuild": "node ./post-build.js",
     "start": "next start -p 3991",
     "lint": "next lint",
@@ -29,7 +29,7 @@
     "tss-react": "^4.9.20"
   },
   "devDependencies": {
-    "browserify": "^17.0.0",
+    "esbuild": "^0.25.0",
     "eslint": "^9.39.4",
     "eslint-config-next": "^15.5.14"
   }
