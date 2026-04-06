@@ -1,6 +1,6 @@
 {
   "name": "hat.sh",
-  "version": "2.3.6",
+  "version": "2.3.7+brw",
   "private": true,
   "scripts": {
     "dev": "esbuild service-worker/sw.js --bundle --platform=browser --outfile=public/service-worker.js && next dev",
